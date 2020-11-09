@@ -13,9 +13,13 @@ public class TimeInterval {
 
     public boolean isIntersectionEmpty(TimeInterval timeInterval) {
 
-        if (timeInterval.end.isBefore(start) || timeInterval.end.isEqual(start))
+        LocalDate end = timeInterval.end;
+        LocalDate start = this.start;
+        if (end.isBefore(start) || end.isEqual(start))
             return true;
-        if (end.isBefore(timeInterval.start) || timeInterval.start.isEqual(end))
+        LocalDate end1 = this.end;
+        LocalDate start1 = timeInterval.start;
+        if (end1.isBefore(start1) || start1.isEqual(end1))
             return true;
         return false;
     }
