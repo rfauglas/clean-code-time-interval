@@ -12,6 +12,11 @@ public class TimeInterval {
     }
 
     public boolean isIntersectionEmpty(TimeInterval timeInterval) {
-         throw new UnsupportedOperationException();
+
+        if (timeInterval.end.isBefore(start) || timeInterval.end.isEqual(start))
+            return true;
+        if (timeInterval.start.isAfter(end) || timeInterval.start.isEqual(end))
+            return true;
+        return false;
     }
 }
