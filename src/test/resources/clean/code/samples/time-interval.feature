@@ -10,4 +10,7 @@ Feature: interval intersection detection
 
     Examples:
     | start_date  |end_date   | expected_result  |
-    | 09/01/2020  |10/01/2020 | false            |
+    | 09/01/2020  |11/01/2020 | true             |
+    | 09/01/2020  |11/02/2020 | false            |
+    | 11/30/2020  |12/31/2020 | false            |
+    | 12/01/2020  |12/31/2020 | true             |
