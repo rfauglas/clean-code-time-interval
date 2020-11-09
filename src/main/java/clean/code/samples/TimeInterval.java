@@ -15,12 +15,16 @@ public class TimeInterval {
 
         LocalDate end = timeInterval.end;
         LocalDate start = this.start;
-        if (end.isBefore(start) || end.isEqual(start))
+        if (isBeforeOrEqual(end, start))
             return true;
         LocalDate end1 = this.end;
         LocalDate start1 = timeInterval.start;
-        if (end1.isBefore(start1) || start1.isEqual(end1))
+        if (isBeforeOrEqual(end1, start1))
             return true;
         return false;
+    }
+
+    private boolean isBeforeOrEqual(LocalDate end, LocalDate start) {
+        return end.isBefore(start) || end.isEqual(start);
     }
 }
