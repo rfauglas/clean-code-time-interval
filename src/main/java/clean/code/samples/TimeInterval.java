@@ -12,14 +12,9 @@ public class TimeInterval {
     }
 
     public boolean isIntersectionEmpty(TimeInterval timeInterval) {
-
-        LocalDate end = timeInterval.end;
-        LocalDate start = this.start;
-        if (isBeforeOrEqual(end, start))
+        if (isBeforeOrEqual(timeInterval.end, this.start))
             return true;
-        LocalDate end1 = this.end;
-        LocalDate start1 = timeInterval.start;
-        if (isBeforeOrEqual(end1, start1))
+        if (isBeforeOrEqual(this.end, timeInterval.start))
             return true;
         return false;
     }
