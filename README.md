@@ -1,7 +1,10 @@
 # clean-code-time-interval
 A clean code exercise:
-- covers Behaviour Driven 
-A few refactoring techniques in the code improvement step...
+- covers test drive driven principles: traffic light principles
+- covers Behaviour Driven Development: Gherkin usage
+- takles down test coverage principles againt software complexity (NPath metrics).
+
+A few refactoring techniques in the code refactoring  step are illustratted....
 
 
 Step|Intent|How
